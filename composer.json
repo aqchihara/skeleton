@@ -9,16 +9,29 @@
   "type": "project",
   "require": {
     "php": ">=7.1.0",
+    "doctrine/dbal": "^2.7",
     "fideloper/proxy": "~3.3",
     "laravel/framework": "5.5.*",
-    "laravel/tinker": "~1.0"
+    "laravel/tinker": "~1.0",
+    "phpmentors/domain-kata": "^1.4",
+    "ytake/laravel-aspect": "2.0.*"
   },
   "require-dev": {
+    "barryvdh/laravel-debugbar": "^3.1",
+    "barryvdh/laravel-ide-helper": "^2.4",
     "filp/whoops": "~2.0",
     "fzaninotto/faker": "~1.4",
+    "lapaz/quick-brown-fox": "^0.1.0",
+    "laravel-ja/comja5": "^1.0",
     "mockery/mockery": "~1.0",
     "phpunit/phpunit": "~6.0",
     "symfony/thanks": "^1.0"
+  },
+  "suggest": {
+    "php-ds/php-ds": "data structures. ex:map, set, ...",
+    "eloquent/enumeration": "java like enum package.",
+    "cakephp/chronos": "immutable date and datetime package.",
+    "laravelcollective/html": "html and form builders for laravel."
   },
   "autoload": {
     "classmap": [
