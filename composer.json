@@ -12,9 +12,7 @@
     "doctrine/dbal": "^2.7",
     "fideloper/proxy": "~3.3",
     "laravel/framework": "5.5.*",
-    "laravel/tinker": "~1.0",
-    "phpmentors/domain-kata": "^1.4",
-    "ytake/laravel-aspect": "2.0.*"
+    "laravel/tinker": "~1.0"
   },
   "require-dev": {
     "barryvdh/laravel-debugbar": "^3.1",
@@ -31,7 +29,9 @@
     "php-ds/php-ds": "data structures. ex:map, set, ...",
     "eloquent/enumeration": "java like enum package.",
     "cakephp/chronos": "immutable date and datetime package.",
-    "laravelcollective/html": "html and form builders for laravel."
+    "laravelcollective/html": "html and form builders for laravel.",
+    "phpmentors/domain-kata": "kata for domain models.",
+    "ytake/laravel-aspect": "aop package for laravel."
   },
   "autoload": {
     "classmap": [
