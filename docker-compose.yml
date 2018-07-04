@@ -1,0 +1,39 @@
+version: '2'
+
+services:
+  web:
+    build: ./build/docker/web
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
+      - ./build/docker/web/php.ini:/usr/local/etc/php/php.ini
+      - ./build/docker/web/000-default.conf:/etc/apache2/sites-available/000-default.conf
+    working_dir: /var/www/html
+  db:
+    image: postgres:alpine
+    restart: always
+    environment:
+      POSTGRES_DB: $DB_DATABASE
+      POSTGRES_USER: $DB_USERNAME
+      POSTGRES_PASSWORD: $DB_PASSWORD
+    ports:
+      - "${DB_PORT}:5432"
+  composer:
+    build: ./build/docker/composer
+    volumes_from:
+      - web
+  php-cli:
+    build: ./build/docker/web
+    volumes:
+      - .:/var/www/html
+      - ./build/docker/web/php.ini:/usr/local/etc/php/php.ini
+      - ./build/docker/web/000-default.conf:/etc/apache2/sites-available/000-default.conf
+    working_dir: /var/www/html
+  test-db:
+    image: postgres:alpine
+    restart: always
+    environment:
+      POSTGRES_DB: $DB_DATABASE
+      POSTGRES_USER: $DB_USERNAME
+      POSTGRES_PASSWORD: $DB_PASSWORD
