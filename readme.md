@@ -34,7 +34,7 @@ php artisan ide-helper:models [--reset] // for eloquent
 
 etc...
 
-## comja5
+## コメント日本語変換
 
 https://github.com/laravel-ja/comja5
 
