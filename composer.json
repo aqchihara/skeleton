@@ -51,6 +51,9 @@
     "post-autoload-dump": [
       "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
       "@php artisan package:discover"
+    ],
+    "coverage": [
+      "php -dxdebug.coverage_enable=1 ./vendor/phpunit/phpunit/phpunit --configuration ./phpunit.xml --teamcity"
     ]
   },
   "config": {

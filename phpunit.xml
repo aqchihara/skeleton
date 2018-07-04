@@ -20,6 +20,13 @@
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">./app</directory>
+            <exclude>
+                <directory suffix="Interface.php">./app</directory>
+            </exclude>
+            <directory suffix=".php">./src</directory>
+            <exclude>
+                <directory suffix="Interface.php">./src</directory>
+            </exclude>
         </whitelist>
     </filter>
     <php>
@@ -29,4 +36,7 @@
         <env name="QUEUE_DRIVER" value="sync"/>
         <env name="DB_HOST" value="test-db"/>
     </php>
+    <logging>
+        <log type="coverage-clover" target="./build/logs/clover.xml"/>
+    </logging>
 </phpunit>
