@@ -16,8 +16,6 @@ winpty docker exec -it [web_container_name] [command] // for windows
 
 ```bash
 docker-compose run --rm composer [command]
-
-docker-compose run --rm composer coverage // generate test coverage in build/logs
 ```
 etc...
 
