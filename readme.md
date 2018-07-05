@@ -43,4 +43,4 @@ vendor/bin/comja5 -f
 ```
 
 誤訳もあるので目安程度に  
-ex:) after_or_equal
+ex) after_or_equal
