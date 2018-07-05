@@ -22,6 +22,8 @@
             <directory suffix=".php">./app</directory>
             <exclude>
                 <directory suffix="Interface.php">./app</directory>
+                <directory>./app/Providers</directory>
+                <file>./app/Console/Kernel.php</file>
             </exclude>
             <directory suffix=".php">./src</directory>
             <exclude>
@@ -37,6 +39,7 @@
         <env name="DB_HOST" value="test-db"/>
     </php>
     <logging>
+        <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
         <log type="coverage-clover" target="./build/logs/clover.xml"/>
     </logging>
 </phpunit>
